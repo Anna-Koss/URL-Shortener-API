@@ -1,6 +1,6 @@
 # Вітаю, шановні
 
-This application provides an API for shortening long links, and also collects statistics about the number of clicks on shortened links. <br>
+This application provides an API for shortening long URLs, and also collects statistics about the number of clicks on shortened URls. <br>
 
 <h3> Built With:</h3>
 - PHP 8.2 <br>
@@ -34,13 +34,14 @@ This application provides an API for shortening long links, and also collects st
 <h3>How it works</h3>
 I believe that the most simple and convenient way to try how the application works is to use Postman.
 My application assumes that the links to be shortened come using the POST method, for example, from some form.
-Postman allows to test this and to see clearly what the response comes.  <br>
-<br>
+Postman allows to test this and to see clearly what the response comes. Or you can use CURL <br>
+
+<pre>       <code> curl --location 'http://localhost:8080/api/shorten-url' \
+        --form 'originalUrl="https://www.php.net/manual/ru/function.filter-var.php" </code></pre>
+
 Also the result of these actions can be observed in the DB - new records are added and the visited counter is changed <br>
 
 Check how the received shortened links and redirects work better directly from the browser
-<pre>       <code> curl --location 'http://localhost:8080/api/shorten-url' \
-        --form 'originalUrl="https://www.php.net/manual/ru/function.filter-var.php" </code></pre>
 
 <br>
 <br>
